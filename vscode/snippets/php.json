@@ -1,0 +1,148 @@
+{
+	/*
+	// Place your snippets for PHP here. Each snippet is defined under a snippet name and has a prefix, body and
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
+	// same ids are connected.
+	// Example:
+	"Print to console": {
+		"prefix": "log",
+		"body": [
+			"console.log("$1");",
+			"$2"
+		],
+		"description": "Log output to console"
+	}
+*/
+	"Dump": {
+		"prefix": "pre",
+		"body": [
+			"echo '<pre style=\"color:black;background-color:white;font-family:monospace;font-size:11px;text-align:left;\">';",
+			"print_r($1);",
+			"echo '</pre>';"
+		]
+	},
+	"Dump and die": {
+		"prefix": "predie",
+		"body": [
+			"echo '<pre style=\"color:black;background-color:white;font-family:monospace;font-size:11px;text-align:left;\">';",
+			"print_r($1);",
+			"echo '</pre>';",
+			"die();"
+		]
+	},
+
+	// WordPress
+	"WP Info: Name": {
+		"prefix": "wp:info_name",
+		"body": ["bloginfo('name')"]
+	},
+	"WP Info: URL": {
+		"prefix": "wp:info_url",
+		"body": ["bloginfo('url')"]
+	},
+	"WP Info: Template URL": {
+		"prefix": "wp:info_tpl_url",
+		"body": ["bloginfo('template_url')"]
+	},
+	"WP Template Path": {
+		"prefix": "wp:template_path",
+		"description": "Retrieve theme directory URI.",
+		"body": ["get_template_directory_uri()"]
+	},
+	"WP Style Path": {
+		"prefix": "wp:stylesheet_path",
+		"description": "Retrieve stylesheet directory URI for the current theme/child theme.",
+		"body": ["get_stylesheet_directory_uri()"]
+	},
+	"WP Include Template Part": {
+		"prefix": "wp:get_template_part",
+		"description": "Loads a template part into a template.",
+		"body": ["get_template_part('${1:template-parts}/${2:template-file}')"]
+	},
+	"WP New Template File": {
+		"prefix": "wp:new_template",
+		"body": [
+			"/**",
+			" * Template Name: $1",
+			" * Description: $1",
+			" */",
+			"?>",
+			"<?php get_header(); ?>",
+			"<?php if (have_posts()) : the_post() ?>",
+			"\t$2",
+			"<?php endif ?>",
+			"<?php get_footer(); ?>"
+		]
+	},
+	"WP Content": {
+		"prefix": "wp:content",
+		"body": [
+			"if (have_posts()) : the_post(); ?>",
+			"\t<?php the_content(); ?>",
+			"<?php endif ?>"
+		]
+	},
+	"WP Custom Post Type": {
+		"prefix": "wp:custom_post_type",
+		"description": "Add new WordPress custom post type",
+		"body": [
+			"function create_post_types() {",
+			"\t$post_type_labels = array(",
+			"\t\t'name' => __( 'Products' ),",
+			"\t\t'singular_name' => __( 'Product' )",
+			"\t);",
+			"\t$post_type_args = array(",
+			"\t\t'labels' => $post_type_labels,",
+			"\t\t'public' => true,",
+			"\t\t'has_archive' => true,",
+			"\t\t'menu_position' => 20, // below Pages",
+			"\t\t'supports' => array( 'title' ),",
+			"\t);",
+			"\tregister_post_type( 'post-type-id', $post_type_args );",
+			"}",
+			"add_action( 'init', 'create_post_types' );"
+		]
+	},
+	// ACF
+	"WP Option Field": {
+		"prefix": "wp:acf_options",
+		"body": ["get_field('${1:field_name}', 'option')"]
+	},
+	"WP Field": {
+		"prefix": "wp:acf_field",
+		"body": [
+			"if (get_field('${1:field_id}')) : ?>",
+			"\t<?php echo get_field('${1:field_id}') ?>",
+			"<?php endif; ?>"
+		]
+	},
+	"WP ACF Repeater": {
+		"prefix": "wp:acf_repeater",
+		"body": [
+			"if (have_rows('${1:field_id}')) : ?>",
+			"<?php while (have_rows('${1:field_id}')): the_row(); ?>",
+			"\t<div></div>",
+			"<?php endwhile; ?>",
+			"<?php endif; ?>"
+		]
+	},
+	"WP ACF Repeater Loop": {
+		"prefix": "wp:acf_repeater",
+		"body": [
+			"if (have_rows('${1:field_id}')) {",
+			"\twhile (have_rows('${1:field_id}')) { the_row();",
+			"\t\t//",
+			"\t}",
+			"}"
+		]
+	},
+	"WP ACF Sub Field": {
+		"prefix": "wp:acf_subfield",
+		"body": ["echo get_sub_field('${1:field_id}') ?>"]
+	},
+	"WP ACF Flexible Content Layout": {
+		"prefix": "wp:acf_flexible_layout",
+		"body": ["get_row_layout() ?>"]
+	},
+}

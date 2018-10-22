@@ -1,0 +1,498 @@
+{
+	/*
+	// Place your snippets for JavaScript here. Each snippet is defined under a snippet name and has a prefix, body and
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
+	// same ids are connected.
+	// Example:
+	"Print to console": {
+		"prefix": "log",
+		"body": [
+			"console.log("$1");",
+			"$2"
+		],
+		"description": "Log output to console"
+	}
+*/
+	// Utils
+	"Simple log": {
+		"prefix": "log",
+		"body": [
+			"console.log(${1:data});"
+		]
+	},
+	"Stringify log": {
+		"prefix": "log:string",
+		"body": [
+			"console.log(JSON.stringify(${1:data}, null, '  '));"
+		]
+	},
+
+	// ESLint
+	"Global Disable ESLint unused-vars": {
+		"prefix": "es:glob_disable_unused_vars",
+		"body": [
+			"/* eslint-disable no-unused-vars */"
+		]
+	},
+	"Global Disable ESLint inline-comments": {
+		"prefix": "es:glob_disable_inline_comments",
+		"body": [
+			"/* eslint-disable no-inline-comments */"
+		]
+	},
+	"Disable ESLint unused-vars": {
+		"prefix": "es:disable_inline_comments",
+		"body": [
+			"// eslint-disable no-unused-vars"
+		]
+	},
+
+	// Express.js
+	"Express.js New Controller": {
+		"prefix": "express_new_controller",
+		"body": [
+			"function ${1:getPage}(req, res, next) {\n\t$2\n}"
+		]
+	},
+	"Express.js POST params": {
+		"prefix": "express_post_params",
+		"body": [
+			"const ${1:name} = req.body.${1:name};"
+		]
+	},
+
+	// jQuery
+	"AJAX": {
+		"prefix": "jq:ajax",
+		"body": [
+			"$.ajax({",
+			"\turl: '${1:url}',",
+			"\tsuccess: function(result) {\n\t\t$2\n\t}",
+			"});"
+		]
+	},
+	"Create Element":  {
+		"prefix": "jq:new_el",
+		"body": [
+			"var el = $('<${1:div}>').attr('class', 'some-class').text('...');",
+			"el.appendTo($('${2:target}'));"
+		]
+	},
+
+	// Comment
+	"JS Doc: Description": {
+		"prefix": "doc_description",
+		"body": [
+			"/* eslint-disable max-len */",
+			"/**",
+			" * ${1:Description}",
+			" *",
+			" * @author ${2:[Mon](https://stash.webon.net:7443/users/mon)}",
+			" * @since ${3:x.x.x}",
+			" */",
+			"/* eslint-enable max-len */"
+		]
+	},
+
+	// React Component
+	"React 14.x New Component": {
+		"prefix": "re:14x_new_component",
+		"body": [
+			"import React, {PropTypes} from 'react';\n",
+			"import './${1:Foo}.css';\n",
+			"class ${1:Foo} extends React.Component {",
+			"\tconstructor(props) {",
+			"\t\tsuper(props);\n",
+			"\t\tthis.state = {};",
+			"\t}\n",
+			"\trender() {",
+			"\t\treturn (<div />);",
+			"\t}",
+			"}\n",
+			"${1:Foo}.propTypes = {};\n",
+			"${1:Foo}.defaultProps = {};\n",
+			"export default ${1:Foo};"
+		]
+	},
+	"React 15.x New Component": {
+		"prefix": "re:15x_new_component",
+		"body": [
+			"import React from 'react';",
+			"import PropTypes from 'prop-types';\n",
+			"import './${1:Foo}.css';\n",
+			"class ${1:Foo} extends React.Component {",
+			"\tconstructor(props) {",
+			"\t\tsuper(props);\n",
+			"\t\tthis.state = {};",
+			"\t}\n",
+			"\trender() {",
+			"\t\treturn (<div />);",
+			"\t}",
+			"}\n",
+			"${1:Foo}.propTypes = {};\n",
+			"${1:Foo}.defaultProps = {};\n",
+			"export default ${1:Foo};"
+		]
+	},
+
+	"React 15.x New Stateless Component": {
+		"prefix": "re:15x_new_stateless_component",
+		"body": [
+			"import React from 'react';",
+			"import PropTypes from 'prop-types';\n",
+			"const ${1:Foo} = () => {",
+			"\treturn (<div />);",
+			"};\n",
+			"${1:Foo}.propTypes = {};\n",
+			"${1:Foo}.defaultProps = {};\n",
+			"export default ${1:Foo};"
+		]
+	},
+	"React Component Constructor": {
+		"prefix": "re:comp_constructure",
+		"body": [
+			"constructor(props) {",
+			"\tsuper(props);\n",
+			"\tthis.state = {};",
+			"}"
+		]
+	},
+	"React Component Cycles": {
+		"prefix": "re:comp_cycles",
+		"body": [
+			"componentWillMount() {\n\t\n}",
+			"componentWillReceiveProps(nextProps){\n\t\n}",
+			"componentWillUnmount(){\n\t\n}"
+		]
+	},
+	"React Component Mount": {
+		"prefix": "re:comp_did_mount",
+		"body": [
+			"componentDidMount() {\n\t$1\n}"
+		]
+	},
+	"React Component Receive Props": {
+		"prefix": "re:component_re_props",
+		"body": [
+			"componentWillReceiveProps(nextProps) {\n\t$1\n}"
+		]
+	},
+	"React Component Should Update": {
+		"prefix": "re:component_should_update",
+		"body": [
+			"shouldComponentUpdate(nextProps, nextState) {\n\t$1\n}"
+		]
+	},
+	"React Component Event": {
+		"prefix": "re:bind_event",
+		"body": [
+			"// this.${1:onEventName} = this.${1:onEventName}.bind(this);\n",
+			"${1:onEventName}(parameter1, parameter2) {",
+			"\treturn this.setState({});",
+			"}"
+		]
+	},
+
+	// Redux
+
+	// Alt
+	"React Component connect to Alt": {
+		"prefix": "re:comp_alt_connect",
+		"description": "Connect component with Alt",
+		"body": [
+			"import connectToStores from 'alt-utils/lib/connectToStores';",
+			"import ${1:TheStore} from '../stores/${1:TheStore}';\n",
+			"export default connectToStores(",
+			"\t{",
+			"\t\tgetPropsFromStores: () => {",
+			"\t\t\tconst {getList} = ${1:TheStore};",
+			"\t\t\treturn {",
+			"\t\t\t\tgetList,",
+			"\t\t\t\tstoreState: ${1:TheStore}.getState()",
+			"\t\t\t};",
+			"\t\t},",
+			"\t\tgetStores: () => [${1:TheStore}]",
+			"\t},",
+			"\t${2:TheComponent}",
+			");"
+		]
+	},
+	"React Alt Actions": {
+		"prefix": "re:alt_actions_init",
+		"description": "Init Alt Actions",
+		"body": [
+			"import alt from '../alt';\n",
+			"class ${1:Resource}Actions {",
+			"\tstatic displayName = '${1:Resource}Actions';\n",
+			"\tconstructor() {",
+			"\t\tthis.generateActions(",
+			"\t\t\t// GET resouce",
+			"\t\t\t'getting${1:Resource}',",
+			"\t\t\t'get${1:Resource}Success',",
+			"\t\t\t'get${1:Resource}Failed'",
+			"\t\t);",
+			"\t}",
+			"}\n",
+			"export default alt.createActions(${1:Resource}Actions);"
+		]
+	},
+	"React Alt Actions GET": {
+		"prefix": "re:alt_actions_get",
+		"description": "Add GET Alt actions",
+		"body": [
+			"'getting${1:Resource}',",
+			"'get${1:Resource}Success',",
+			"'get${1:Resource}Failed'"
+		]
+	},
+	"React Alt Actions PATCH": {
+		"prefix": "re:alt_actions_patch",
+		"description": "Add PATCH Alt actions",
+		"body": [
+			"'patching${1:Resource}',",
+			"'patch${1:Resource}Success',",
+			"'patch${1:Resource}Failed'"
+		]
+	},
+	"React Alt Actions POST": {
+		"prefix": "re:alt_actions_post",
+		"description": "Add POST Alt actions",
+		"body": [
+			"'creating${1:Resource}',",
+			"'create${1:Resource}Success',",
+			"'create${1:Resource}Failed'"
+		]
+	},
+	"React Alt Actions DELETE": {
+		"prefix": "re:alt_actions_del",
+		"description": "Add DELETE Alt actions",
+		"body": [
+			"'deleting${1:Resource}',",
+			"'delete${1:Resource}Success',",
+			"'delete${1:Resource}Failed'"
+		]
+	},
+	"React Alt Source": {
+		"prefix": "re:alt_sources_init",
+		"description": "Init Alt Source",
+		"body": [
+			"import axios from 'axios';",
+			"import ${1:TheActions} from '../actions/${1:TheActions}';\n",
+			"export default {",
+			"\tget${2:Resource}List() {",
+			"\t\treturn {",
+			"\t\t\tremote(state, params) {",
+			"\t\t\t\tconst config = {",
+			"\t\t\t\t\tmethod: 'get'",
+			"\t\t\t\t};",
+			"\t\t\t\treturn axios.request(config).then(result => result.data);",
+			"\t\t\t},",
+			"\t\t\tloading: ${1:RerouceActions}.getting${2:Resource},",
+			"\t\t\tsuccess: ${1:RerouceActions}.get${2:Resource}Success,",
+			"\t\t\terror: ${1:RerouceActions}.get${2:Resource}Failed",
+			"\t\t};",
+			"\t}",
+			"};"
+		]
+	},
+	"React Alt Add new endpoint to Source GET": {
+		"prefix": "re:alt_sources_get",
+		"description": "Add new Alt Source endpoint GET",
+		"body": [
+			"get${1:Resource}List() {",
+			"\treturn {",
+			"\t\tremote(state, params) {",
+			"\t\t\tconst config = {",
+			"\t\t\t\tmethod: 'get',",
+			"\t\t\t\turl: '/${4:resource}'",
+			"\t\t\t};",
+			"\t\t\treturn axios.request(config).then(result => result.data);",
+			"\t\t},",
+			"\t\tloading: ${2:RerouceActions}.getting${3:Resource},",
+			"\t\tsuccess: ${2:RerouceActions}.get${3:Resource}Success,",
+			"\t\terror: ${2:RerouceActions}.get${3:Resource}Failed",
+			"\t};",
+			"}"
+		]
+	},
+	"React Alt Add new endpoint to Source POST": {
+		"prefix": "re:alt_sources_post",
+		"description": "Add new Alt Source endpoint POST",
+		"body": [
+			"update${1:Resource}List() {",
+			"\treturn {",
+			"\t\tremote(state, params) {",
+			"\t\t\tconst config = {",
+			"\t\t\t\tmethod: 'post',",
+			"\t\t\t\turl: '/${4:resource}',",
+			"\t\t\t\tdata: params",
+			"\t\t\t};",
+			"\t\t\treturn axios.request(config).then(result => result.data);",
+			"\t\t},",
+			"\t\tloading: ${2:ResouceActions}.creating${3:Resource},",
+			"\t\tsuccess: ${2:ResouceActions}.create${3:Resource}Success,",
+			"\t\terror: ${2:ResouceActions}.create${3:Resource}Failed",
+			"\t};",
+			"}"
+		]
+	},
+	"React Alt Add new endpoint to Source PUT": {
+		"prefix": "re:alt_sources_put",
+		"description": "Add new Alt Source endpoint PUT",
+		"body": [
+			"update${1:Resource}List() {",
+			"\treturn {",
+			"\t\tremote(state, params) {",
+			"\t\t\tconst config = {",
+			"\t\t\t\tmethod: 'put',",
+			"\t\t\t\turl: '/${4:resource}',",
+			"\t\t\t\tdata: params",
+			"\t\t\t};",
+			"\t\t\treturn axios.request(config).then(result => result.data);",
+			"\t\t},",
+			"\t\tloading: ${2:ResouceActions}.updating${3:Resource},",
+			"\t\tsuccess: ${2:ResouceActions}.update${3:Resource}Success,",
+			"\t\terror: ${2:ResouceActions}.update${3:Resource}Failed",
+			"\t};",
+			"}"
+		]
+	},
+	"React Alt Add Store": {
+		"prefix": "re:alt_store_init",
+		"description": "Init Alt Store",
+		"body": [
+			"import alt from '../alt';",
+			"import ${1:Resource}Source from '../sources/${1:Resource}Source';",
+			"import ${1:Resource}Actions from '../actions/${1:Resource}Actions';",
+			"class ${1:Resource}Store {",
+			"\tconstructor() {",
+			"\t\tthis.registerAsync(${1:Resource}Source);",
+			"\t\tthis.bindActions(${1:Resource}Actions);",
+			"\t}",
+			"}",
+			"export default alt.createStore(${1:Resource}Store, '${1:Resource}Store');"
+		]
+	},
+	"React Alt Add Store data": {
+		"prefix": "re:alt_store_data",
+		"description": "Data structure in Store",
+		"body": [
+			"this.isLoading${1:Resource}List = false;",
+			"this.isLoading${1:Resource} = false;\n",
+			"this.${1:resource}List = [];",
+			"this.${1:resource} = {};\n",
+			"this.errorMessage = '';",
+		]
+	},
+	"React Alt bind Store with GET": {
+		"prefix": "re:alt_store_bind_get",
+		"description": "Data structure in Store for GET",
+		"body": [
+			"\\GET ${:Resource}",
+			"getting${1:Resource}() {",
+			"\tthis.isLoading${1:Resource} = true;",
+			"}",
+			"get${1:Resource}Success(result) {",
+			"\tthis.isLoading${1:Resource} = false;",
+			"\tthis.${1:Resource} = result;",
+			"}",
+			"get${1:Resource}Failed() {",
+			"\tthis.isLoading${1:Resource} = false;",
+			"}"
+		]
+	},
+	"React Alt bind Store with POST": {
+		"prefix": "re:alt_store_bind_post",
+		"description": "Data structure in Store for POST",
+		"body": [
+			"\\POST ${:Resource}",
+			"creating${1:Resource}() {",
+			"\tthis.isCreating${1:Resource} = true;",
+			"\tthis.created${1:Resource} = null;",
+			"}",
+			"create${1:Resource}Success(result) {",
+			"\tthis.isCreating${1:Resource} = false;",
+			"\tthis.created${1:Resource} = result",
+			"}",
+			"create${1:Resource}Failed() {",
+			"\tthis.isCreating${1:Resource} = false;",
+			"}"
+		]
+	},
+
+	// Unit testing: Jest
+	"New test suite": {
+		"prefix": "re:jest_new_suite",
+		"description": "New test suite",
+		"body": [
+			"/* eslint-disable max-len, max-nested-callbacks */\n",
+			"import React from 'react';",
+			"import {shallow} from 'enzyme';",
+			"import toJson from 'enzyme-to-json';\n",
+			"import UutWithStores, {${1:Component} as Uut} from './${1:Component}';\n",
+			"describe('mounting store testing', () => {\n\t//\n\n});\n",
+			"describe('snapshot testing', () => {\n\t//\n\n});\n",
+			"describe('lifecycle testing', () => {\n\t//\n\n});\n",
+			"describe('behavior testing', () => {\n\t//\n\n});",
+		]
+	},
+	"Test lifecycle": {
+		"prefix": "re:jest_new_lifecycle_testing",
+		"description": "New lifecycle testing",
+		"body": [
+			"describe('lifecycle testing', () => {",
+			"\ttest('componentDidMount', () => {",
+			"\t\tconst props = {\n\t\t\tgetSomething: jest.fn(() => Promise.resolve())\n\t\t};",
+			"\t\tconst wrapper = shallow(<Uut {...props} />);",
+			"\t\twrapper.instance().componentDidMount();",
+			"\t\texpect(props.getSomething).toHaveBeenCalledTimes(1);",
+			"\t});",
+			"});"
+		]
+	},
+	"Test behavior": {
+		"prefix": "re:jest_new_behavior_testing",
+		"description": "New behavior testing",
+		"body": [
+			"describe('should use the `onEvent1` prop', () => {",
+			"\ttest('have been called on componentDidMount', () => {",
+			"\t\tconst props = {\n\t\t\tonEvent1: jest.fn(() => Promise.resolve())\n\t\t};",
+			"\t\tconst wrapper = shallow(<Uut {...props} />);",
+			"\t\twrapper.instance().componentDidMount();",
+			"\t\texpect(props.onEvent1).toHaveBeenCalledTimes(1);",
+			"\t});",
+			"});",
+			"describe('should use the `onEvent2` prop', () => {",
+			"\ttest('have been called if has value', () => {",
+			"\t\tconst props = {\n\t\t\tonEvent2: jest.fn()\n\t\t};",
+			"\t\tconst wrapper = shallow(<Uut {...props} />);",
+			"\t\twrapper.instance().doSomething('value');",
+			"\t\texpect(props.onEvent2).toHaveBeenCalledWith('value');",
+			"\t});",
+			"});"
+		]
+	},
+
+	// 3rd Parties Packages
+	"Blustone System Message": {
+		"prefix": "re:bs_system_message",
+		"body": [
+			"this.props.actions.systemMessagesActions.showSystemMessage({",
+			"\ttext: this.props.modelState.errorMessage,",
+			"\ttype: 'error||success',",
+			"\tautoHide: true,",
+			"\thideAfter: 2000",
+			"});"
+		]
+	},
+
+	// Helpers
+	"Dump": {
+		"prefix": "re:dump_props",
+		"description": "Dump the props as JSON",
+		"body": [
+			"<pre>{JSON.stringify(${1:this.props}, null, '  ')}</pre>"
+		]
+	}
+}

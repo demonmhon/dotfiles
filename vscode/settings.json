@@ -1,0 +1,32 @@
+{
+    "terminal.integrated.fontFamily": "Hack",
+    "terminal.integrated.fontSize": 11,
+    "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}",
+    "workbench.iconTheme": "file-icons",
+    "workbench.colorTheme": "One Dark Pro",
+    "editor.renderWhitespace": "all",
+    "editor.fontFamily": "Hack, Menlo, Monaco, 'Courier New', monospace",
+    "editor.tabSize": 2,
+    "editor.snippetSuggestions": "top",
+    "editor.minimap.enabled": false,
+    "workbench.editor.enablePreview": false,
+    "prettier.singleQuote": true,
+    "workbench.startupEditor": "newUntitledFile",
+    "window.closeWhenEmpty": false,
+    "markdown.preview.fontSize": 13,
+    "files.exclude": {
+        "**/.git": false
+    },
+    "search.exclude": {
+        "**/.git": true
+    },
+    "workbench.list.openMode": "doubleClick",
+    "explorer.autoReveal": false,
+    "cSpell.userWords": [
+        "Gomeeki"
+    ],
+    "workbench.sideBar.location": "right",
+    "editor.scrollBeyondLastLine": false,
+    "workbench.statusBar.feedback.visible": false,
+    "breadcrumbs.enabled": true
+}
