@@ -26,6 +26,5 @@ code --install-extension zhuangtongfa.Material-theme
 echo "Extensions for VSC have been installed. Please restart your VSC."
 echo "Copying settings, keybindings and snippets ..."
 
-ln -s ./settings.json ~/Library/Application\ Support/Code/User/settings.json
-ln -s ./keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
-ln -s ./snippets /~/Library/Application\ Support/Code/User/snippets/
+rm -rf ~/Library/Application\ Support/Code/User
+ln -s ~/dotfiles/vscode ~/Library/Application\ Support/Code/User
