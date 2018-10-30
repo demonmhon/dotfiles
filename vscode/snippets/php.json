@@ -117,16 +117,6 @@
 			"<?php endif; ?>"
 		]
 	},
-	"WP ACF Repeater": {
-		"prefix": "wp:acf_repeater",
-		"body": [
-			"if (have_rows('${1:field_id}')) : ?>",
-			"<?php while (have_rows('${1:field_id}')): the_row(); ?>",
-			"\t<div></div>",
-			"<?php endwhile; ?>",
-			"<?php endif; ?>"
-		]
-	},
 	"WP ACF Repeater Loop": {
 		"prefix": "wp:acf_repeater",
 		"body": [
@@ -139,10 +129,10 @@
 	},
 	"WP ACF Sub Field": {
 		"prefix": "wp:acf_subfield",
-		"body": ["echo get_sub_field('${1:field_id}') ?>"]
+		"body": ["echo get_sub_field('${1:field_id}')"]
 	},
 	"WP ACF Flexible Content Layout": {
 		"prefix": "wp:acf_flexible_layout",
-		"body": ["get_row_layout() ?>"]
+		"body": ["get_row_layout()"]
 	},
 }
