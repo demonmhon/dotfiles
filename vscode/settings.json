@@ -1,18 +1,13 @@
 {
-    "terminal.integrated.fontFamily": "Hack",
-    "terminal.integrated.fontSize": 11,
-    "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}",
-    "workbench.iconTheme": "file-icons",
-    "workbench.colorTheme": "One Dark Pro",
+    "breadcrumbs.enabled": true,
+    "editor.scrollBeyondLastLine": false,
     "editor.renderWhitespace": "all",
     "editor.fontFamily": "Hack, Menlo, Monaco, 'Courier New', monospace",
     "editor.tabSize": 2,
     "editor.snippetSuggestions": "top",
     "editor.minimap.enabled": false,
-    "workbench.editor.enablePreview": false,
+    "explorer.autoReveal": false,
     "prettier.singleQuote": true,
-    "workbench.startupEditor": "newUntitledFile",
-    "window.closeWhenEmpty": false,
     "markdown.preview.fontSize": 13,
     "files.exclude": {
         "**/.git": false
@@ -21,12 +16,18 @@
         "**/.git": true
     },
     "workbench.list.openMode": "doubleClick",
-    "explorer.autoReveal": false,
     "cSpell.userWords": [
         "Gomeeki"
     ],
+    "terminal.integrated.fontFamily": "Hack",
+    "terminal.integrated.fontSize": 11,
+    "window.closeWhenEmpty": false,
+    "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}",
     "workbench.sideBar.location": "right",
-    "editor.scrollBeyondLastLine": false,
+    "workbench.iconTheme": "file-icons",
+    "workbench.colorTheme": "One Dark Pro",
     "workbench.statusBar.feedback.visible": false,
-    "breadcrumbs.enabled": true
+    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.editor.enablePreview": false,
+    "workbench.startupEditor": "newUntitledFile"
 }
