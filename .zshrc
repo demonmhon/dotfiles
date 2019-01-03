@@ -97,6 +97,15 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-prompt_context() {}
+# prompt_context() {}
+
+alias dkps="docker ps"
+alias dkst="docker stats"
+alias dkpsa="docker ps -a"
+alias dkimgs="docker images"
+alias dkcpup="docker-compose up -d"
+alias dkcpdown="docker-compose down"
+alias dkcpstart="docker-compose start"
+alias dkcpstop="docker-compose stop"
 
 alias ip="curl ifconfig.me"
