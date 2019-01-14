@@ -8,3 +8,6 @@ killall Dock
 
 # Disable "Press And Hold" to enable key repeat
 defaults write -g ApplePressAndHoldEnabled -bool false
+
+# Disable the shadow added when capturing an entire window
+defaults write com.apple.screencapture disable-shadow -bool true
