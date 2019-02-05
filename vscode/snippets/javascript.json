@@ -52,7 +52,13 @@
 	"Express.js New Controller": {
 		"prefix": "express_new_controller",
 		"body": [
-			"function ${1:getPage}(req, res, next) {\n\t$2\n}"
+			"function ${1:getPage}(req, res, next) {\n\t$2const { id } = req.params;\n}"
+		]
+	},
+	"Express.js New Route": {
+		"prefix": "express_new_route",
+		"body": [
+			"router.route('/${1:resources}/:id*?').get(${2:[middleware]}, ${3:(req, res, next) => {}});"
 		]
 	},
 	"Express.js POST params": {

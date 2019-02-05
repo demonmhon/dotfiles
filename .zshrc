@@ -97,7 +97,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# prompt_context() {}
+prompt_context() {}
 
 alias dkps="docker ps"
 alias dkst="docker stats"
@@ -107,8 +107,12 @@ alias dkcpup="docker-compose up -d"
 alias dkcpdown="docker-compose down"
 alias dkcpstart="docker-compose start"
 alias dkcpstop="docker-compose stop"
+alias dklogsf="docker logs --follow"
+alias dklogs="docker logs"
 
 alias ip="curl ifconfig.me"
+
+alias zre="source ~/.zshrc"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
