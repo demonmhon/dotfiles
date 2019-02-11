@@ -99,6 +99,8 @@ source $ZSH/oh-my-zsh.sh
 
 prompt_context() {}
 
+alias cls="clear"
+
 alias dkps="docker ps"
 alias dkst="docker stats"
 alias dkpsa="docker ps -a"
