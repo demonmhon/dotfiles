@@ -27,7 +27,6 @@
 			"console.log(JSON.stringify(${1:data}, null, '  '));"
 		]
 	},
-
 	// ESLint
 	"Global Disable ESLint unused-vars": {
 		"prefix": "es:glob_disable_unused_vars",
@@ -47,27 +46,31 @@
 			"// eslint-disable no-unused-vars"
 		]
 	},
-
 	// Express.js
 	"Express.js New Controller": {
-		"prefix": "express_new_controller",
+		"prefix": "exp:ctrl",
 		"body": [
 			"function ${1:getPage}(req, res, next) {\n\t$2const { id } = req.params;\n}"
 		]
 	},
 	"Express.js New Route": {
-		"prefix": "express_new_route",
+		"prefix": "exp:route",
 		"body": [
 			"router.route('/${1:resources}/:id*?').get(${2:[middleware]}, ${3:(req, res, next) => {}});"
 		]
 	},
+	"Express.js GET params": {
+		"prefix": "exp:get:p",
+		"body": [
+			"const ${1:name} = req.params.${1:name};"
+		]
+	},
 	"Express.js POST params": {
-		"prefix": "express_post_params",
+		"prefix": "exp:post:p",
 		"body": [
 			"const ${1:name} = req.body.${1:name};"
 		]
 	},
-
 	// jQuery
 	"AJAX": {
 		"prefix": "jq:ajax",
@@ -78,14 +81,13 @@
 			"});"
 		]
 	},
-	"Create Element":  {
+	"Create Element": {
 		"prefix": "jq:new_el",
 		"body": [
 			"var el = $('<${1:div}>').attr('class', 'some-class').text('...');",
 			"el.appendTo($('${2:target}'));"
 		]
 	},
-
 	// Comment
 	"JS Doc: Description": {
 		"prefix": "doc_description",
@@ -100,7 +102,6 @@
 			"/* eslint-enable max-len */"
 		]
 	},
-
 	// React Component
 	"React 14.x New Component": {
 		"prefix": "re:14x_new_component",
@@ -141,7 +142,6 @@
 			"export default ${1:Foo};"
 		]
 	},
-
 	"React 15.x New Stateless Component": {
 		"prefix": "re:15x_new_stateless_component",
 		"body": [
@@ -199,9 +199,60 @@
 			"}"
 		]
 	},
-
 	// Redux
-
+	"Redux Actions": {
+		"prefix": "rdx:actions",
+		"body": [
+			"export const ACTIONS = {",
+			"\t${1:ACTION_NAME}: '${1:ACTION_NAME}'",
+			"}\n",
+			"export default ACTIONS;"
+		]
+	},
+	"Redux Reducer": {
+		"prefix": "rdx:reducer",
+		"body": [
+			"import ACTIONS from '../constants/action-types';",
+			"const initialState = {\n\tdata: {}\n};\n",
+			"export default function ${1:TheReducer}(state = initialState, action = {}) {",
+			"\tswitch (action.type) {",
+			"\t\tcase ACTIONS.${ACTION_NAME}:",
+			"\t\t\treturn {",
+			"\t\t\t\t...state",
+			"\t\t\t}",
+			"\t}",
+			"}"
+		]
+	},
+	"Redux Container": {
+		"prefix": "rdx:container",
+		"body": [
+			"import { connect } from 'react-redux';",
+			"import { propName } from '../actions/the-actions';\n",
+			"class ${1:Foo} extends React.Component {",
+			"\trender() {",
+			"\t\treturn (<div />);",
+			"\t}",
+			"};\n",
+			"const mapStateToProps = (state, ownProps) => {",
+			"\treturn {",
+			"\t\t${2:propName}: ${2:prop}",
+			"\t}",
+			"}",
+			"",
+			"const mapDispatchToProps = (dispatch) => {",
+			"\treturn {",
+			"\t\t${3:propName}: params => dispatch(${3:propName}(params))",
+			"\t}",
+			"}",
+			"const ${containerName} = connect(",
+			"\tmapStateToProps,",
+			"\tmapDispatchToProps",
+			")(${1:Foo})\n",
+			"export default ${1:Foo};"
+		],
+		"description": "Redux container"
+	},
 	// Alt
 	"React Component connect to Alt": {
 		"prefix": "re:comp_alt_connect",
@@ -426,7 +477,6 @@
 			"}"
 		]
 	},
-
 	// Unit testing: Jest
 	"New test suite": {
 		"prefix": "re:jest_new_suite",
@@ -479,7 +529,6 @@
 			"});"
 		]
 	},
-
 	// 3rd Parties Packages
 	"Blustone System Message": {
 		"prefix": "re:bs_system_message",
@@ -492,7 +541,6 @@
 			"});"
 		]
 	},
-
 	// Helpers
 	"Dump": {
 		"prefix": "re:dump_props",

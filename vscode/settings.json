@@ -1,6 +1,5 @@
 {
     "breadcrumbs.enabled": true,
-    "editor.scrollBeyondLastLine": false,
     "editor.renderWhitespace": "all",
     "editor.fontFamily": "Hack, Menlo, Monaco, 'Courier New', monospace",
     "editor.tabSize": 2,
@@ -17,7 +16,8 @@
     },
     "workbench.list.openMode": "doubleClick",
     "cSpell.userWords": [
-        "Gomeeki"
+        "Gomeeki",
+        "AdvisorZone"
     ],
     "terminal.integrated.fontFamily": "Hack",
     "terminal.integrated.fontSize": 11,
@@ -33,5 +33,7 @@
     "npm.fetchOnlinePackageInfo": false,
     "editor.renderControlCharacters": false,
     "gitlens.currentLine.enabled": false,
-    "gitlens.currentLine.scrollable": false
+    "gitlens.currentLine.scrollable": false,
+    "javascript.implicitProjectConfig.checkJs": true,
+    "window.zoomLevel": 0
 }
