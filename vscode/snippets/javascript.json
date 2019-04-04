@@ -1,19 +1,4 @@
 {
-	/*
-	// Place your snippets for JavaScript here. Each snippet is defined under a snippet name and has a prefix, body and
-	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
-	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
-	// same ids are connected.
-	// Example:
-	"Print to console": {
-		"prefix": "log",
-		"body": [
-			"console.log("$1");",
-			"$2"
-		],
-		"description": "Log output to console"
-	}
-*/
 	// Utils
 	"Simple log": {
 		"prefix": "log",
@@ -366,9 +351,9 @@
 			"\t\t\t};",
 			"\t\t\treturn axios.request(config).then(result => result.data);",
 			"\t\t},",
-			"\t\tloading: ${2:RerouceActions}.getting${3:Resource},",
-			"\t\tsuccess: ${2:RerouceActions}.get${3:Resource}Success,",
-			"\t\terror: ${2:RerouceActions}.get${3:Resource}Failed",
+			"\t\tloading: ${2:ResourceActions}.getting${3:Resource},",
+			"\t\tsuccess: ${2:ResourceActions}.get${3:Resource}Success,",
+			"\t\terror: ${2:ResourceActions}.get${3:Resource}Failed",
 			"\t};",
 			"}"
 		]
@@ -387,9 +372,9 @@
 			"\t\t\t};",
 			"\t\t\treturn axios.request(config).then(result => result.data);",
 			"\t\t},",
-			"\t\tloading: ${2:ResouceActions}.creating${3:Resource},",
-			"\t\tsuccess: ${2:ResouceActions}.create${3:Resource}Success,",
-			"\t\terror: ${2:ResouceActions}.create${3:Resource}Failed",
+			"\t\tloading: ${2:ResourceActions}.creating${3:Resource},",
+			"\t\tsuccess: ${2:ResourceActions}.create${3:Resource}Success,",
+			"\t\terror: ${2:ResourceActions}.create${3:Resource}Failed",
 			"\t};",
 			"}"
 		]
@@ -408,9 +393,9 @@
 			"\t\t\t};",
 			"\t\t\treturn axios.request(config).then(result => result.data);",
 			"\t\t},",
-			"\t\tloading: ${2:ResouceActions}.updating${3:Resource},",
-			"\t\tsuccess: ${2:ResouceActions}.update${3:Resource}Success,",
-			"\t\terror: ${2:ResouceActions}.update${3:Resource}Failed",
+			"\t\tloading: ${2:ResourceActions}.updating${3:Resource},",
+			"\t\tsuccess: ${2:ResourceActions}.update${3:Resource}Success,",
+			"\t\terror: ${2:ResourceActions}.update${3:Resource}Failed",
 			"\t};",
 			"}"
 		]
@@ -439,7 +424,7 @@
 			"this.isLoading${1:Resource} = false;\n",
 			"this.${1:resource}List = [];",
 			"this.${1:resource} = {};\n",
-			"this.errorMessage = '';",
+			"this.errorMessage = '';"
 		]
 	},
 	"React Alt bind Store with GET": {
@@ -490,7 +475,7 @@
 			"describe('mounting store testing', () => {\n\t//\n\n});\n",
 			"describe('snapshot testing', () => {\n\t//\n\n});\n",
 			"describe('lifecycle testing', () => {\n\t//\n\n});\n",
-			"describe('behavior testing', () => {\n\t//\n\n});",
+			"describe('behavior testing', () => {\n\t//\n\n});"
 		]
 	},
 	"Test lifecycle": {

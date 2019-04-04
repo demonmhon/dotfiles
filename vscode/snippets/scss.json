@@ -1,28 +1,13 @@
 {
-/*
-	// Place your snippets for SCSS here. Each snippet is defined under a snippet name and has a prefix, body and
-	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
-	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
-	// same ids are connected.
-	// Example:
-	"Print to console": {
-		"prefix": "log",
-		"body": [
-			"console.log('$1');",
-			"$2"
-		],
-		"description": "Log output to console"
-	}
-*/
-	// Stylelint
 	"Global Disable Stylelint number-leading-zero": {
 		"prefix": "sl:glob_disable_number_leading_zero",
+		"description": "Disable Stylelint rule",
 		"body": [
 			"/* stylelint-disable number-leading-zero */"
 		]
 	},
 	"Font": {
-		"prefix": "font",
+		"prefix": "@font",
 		"body": [
 			"@font-face {",
 			"\tfont-family: '${1:FontFamily}';",
@@ -34,7 +19,7 @@
 			"\t\turl('../fonts/${2:font-file-name}-webfont.svg#${1:FontFamily}') format('svg');",
 			"\tfont-weight: normal;",
 			"\tfont-style: normal;",
-			"}",
+			"}"
 		]
 	},
 	"BS3: Media query list": {
@@ -42,7 +27,7 @@
 		"body": [
 			"@media (min-width: $$screen-sm) {\n\t${1}\n}",
 			"@media (min-width: $$screen-md) {\n\t\n}",
-			"@media (min-width: $$screen-lg) {\n\t\n}",
+			"@media (min-width: $$screen-lg) {\n\t\n}"
 		]
 	},
 	"BS4: Media query": {
@@ -50,8 +35,8 @@
 		"body": [
 			"@include media-breakpoint-up(sm) {",
 			"\t${1:.class} {",
-			"\t\t${2:display: block;}"
-			"\t}"
+			"\t\t${2:display: block;}",
+			"\t}",
 			"}"
 		]
 	}

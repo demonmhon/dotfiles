@@ -1,0 +1,35 @@
+{
+	// Place your snippets for dockerfile here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"Docker for React": {
+		"prefix": "dk:react",
+		"description": "build react for production",
+		"body": [
+			"# 1: Build to dist",
+			"FROM node:8-alpine as build",
+			"RUN apk add --no-cache curl gcc g++ git grep make python unzip",
+			"WORKDIR /usr/app",
+			"COPY package*.json ./",
+			"RUN npm install --silent",
+			"COPY . ./",
+			"RUN npm run build\n",
+			"# 2: Production Environment",
+			"FROM nginx:1.13.12-alpine",
+			"WORKDIR /usr/share/nginx/html",
+			"COPY --from=build /usr/app/dist ./",
+			"EXPOSE 80",
+			"CMD [\"nginx\", \"-g\", \"daemon off;\"]"
+		]
+	}
+}
