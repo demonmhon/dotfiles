@@ -81,7 +81,10 @@
 			"/**",
 			" * ${1:Description}",
 			" *",
-			" * @author ${2:[Mon](https://stash.webon.net:7443/users/mon)}",
+			" * @param {number} x - The x value.",
+			" * @return {object} The object of the data",
+			" *",
+			" * @author ${2:[Mhon](https://github.com/demonmhon)}",
 			" * @since ${3:x.x.x}",
 			" */",
 			"/* eslint-enable max-len */"
