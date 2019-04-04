@@ -93,6 +93,7 @@
 	// React Component
 	"React 14.x New Component": {
 		"prefix": "re:14x_new_component",
+		"description": "New React.Component (React 14)",
 		"body": [
 			"import React, {PropTypes} from 'react';\n",
 			"import './${1:Foo}.css';\n",
@@ -112,6 +113,7 @@
 	},
 	"React 15.x New Component": {
 		"prefix": "re:15x_new_component",
+		"description": "New React.Component (React 15+)",
 		"body": [
 			"import React from 'react';",
 			"import PropTypes from 'prop-types';\n",
@@ -132,6 +134,7 @@
 	},
 	"React 15.x New Stateless Component": {
 		"prefix": "re:15x_new_stateless_component",
+		"description": "New stateless React Component (React 15+)",
 		"body": [
 			"import React from 'react';",
 			"import PropTypes from 'prop-types';\n",
@@ -145,6 +148,7 @@
 	},
 	"React Component Constructor": {
 		"prefix": "re:comp_constructure",
+		"description": "",
 		"body": [
 			"constructor(props) {",
 			"\tsuper(props);\n",
