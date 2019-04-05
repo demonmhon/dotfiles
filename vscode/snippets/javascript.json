@@ -192,8 +192,8 @@
 		]
 	},
 	// Redux
-	"Redux Actions": {
-		"prefix": "rdx:actions",
+	"Redux Actions Constant": {
+		"prefix": "rdx:actions_const",
 		"body": [
 			"export const ACTIONS = {",
 			"\t${1:ACTION_NAME}: '${1:ACTION_NAME}'",
@@ -201,10 +201,35 @@
 			"export default ACTIONS;"
 		]
 	},
+	"Redux Actions": {
+		"prefix": "rdx:actions",
+		"body": [
+			"import ACTIONS from '../constants/action-types';\n",
+			"export const ACTIONS = {",
+			"\t${1:ACTION_NAME}: '${1:ACTION_NAME}'",
+			"}\n",
+			"export const doSomething = params => {",
+			"\treturn async dispatch => {",
+			"\t\tdispatch({type: ACTIONS.LOADING});",
+			"\t}",
+			"}"
+		]
+	},
+	"Redux Combine Reducer": {
+		"prefix": "rdx:reducer",
+		"body": [
+			"import { combineReducers } from 'redux';",
+			"import ${1:theReducer} from './${2:the-reducer}';\n",
+			"const rootReducer = combineReducers({",
+			"\t${1:theReducer}",
+			"})\n",
+			"export default rootReducer;"
+		]
+	},
 	"Redux Reducer": {
 		"prefix": "rdx:reducer",
 		"body": [
-			"import ACTIONS from '../constants/action-types';",
+			"import ACTIONS from '../constants/action-types';\n",
 			"const initialState = {\n\tdata: {}\n};\n",
 			"export default function ${1:TheReducer}(state = initialState, action = {}) {",
 			"\tswitch (action.type) {",
