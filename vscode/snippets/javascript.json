@@ -209,7 +209,7 @@
 			"\t${1:ACTION_NAME}: '${1:ACTION_NAME}'",
 			"}\n",
 			"export const doSomething = params => {",
-			"\treturn async dispatch => {",
+			"\treturn async (dispatch, getState) => {",
 			"\t\tdispatch({type: ACTIONS.LOADING});",
 			"\t}",
 			"}"
