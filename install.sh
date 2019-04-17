@@ -12,3 +12,4 @@ create_or_replace_symlink() {
 create_or_replace_symlink $HOME/dotfiles/.zshrc $HOME/.zshrc
 
 $HOME/dotfiles/scripts/setup.sh
+$HOME/dotfiles/scripts/git.sh
