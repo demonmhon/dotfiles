@@ -14,29 +14,30 @@
     "search.exclude": {
         "**/.git": true
     },
-    "workbench.list.openMode": "doubleClick",
     "cSpell.userWords": [
         "Gomeeki",
         "AdvisorZone"
     ],
     "terminal.integrated.fontFamily": "Hack",
     "terminal.integrated.fontSize": 11,
-    "window.closeWhenEmpty": false,
-    "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}",
+    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
     "workbench.sideBar.location": "right",
     "workbench.iconTheme": "file-icons",
     "workbench.colorTheme": "One Dark Pro",
-    "workbench.statusBar.feedback.visible": false,
     "workbench.editor.highlightModifiedTabs": true,
     "workbench.editor.enablePreview": false,
+    "workbench.list.openMode": "doubleClick",
     "workbench.startupEditor": "newUntitledFile",
+    "workbench.statusBar.feedback.visible": false,
     "npm.fetchOnlinePackageInfo": false,
     "editor.renderControlCharacters": false,
     "gitlens.currentLine.enabled": false,
     "gitlens.currentLine.scrollable": false,
+    "gitlens.defaultGravatarsStyle": "mp",
     "javascript.implicitProjectConfig.checkJs": true,
+    "window.closeWhenEmpty": false,
+    "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}",
     "window.zoomLevel": 0,
-    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     }
