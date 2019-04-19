@@ -1,6 +1,7 @@
 echo "Installing extensions ..."
 
 code --install-extension 2gua.rainbow-brackets
+code --install-extension oderwat.indent-rainbow
 code --install-extension akamud.vscode-theme-onelight
 code --install-extension alefragnani.Bookmarks
 code --install-extension Arjun.swagger-viewer
