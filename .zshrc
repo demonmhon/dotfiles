@@ -111,6 +111,7 @@ alias dkcpstart="docker-compose start"
 alias dkcpstop="docker-compose stop"
 alias dklogsf="docker logs --follow"
 alias dklogs="docker logs"
+alias dkx="docker exec -it"
 
 alias ip="curl ifconfig.me"
 
