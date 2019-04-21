@@ -103,6 +103,7 @@ alias cls="clear"
 
 alias dkps="docker ps"
 alias dkst="docker stats"
+alias dkstopall="docker stop $(docker ps -a -q)"
 alias dkpsa="docker ps -a"
 alias dkimgs="docker images"
 alias dkcpup="docker-compose up -d"
