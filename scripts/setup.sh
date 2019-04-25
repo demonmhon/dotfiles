@@ -16,3 +16,6 @@ defaults write com.apple.screencapture disable-shadow -bool true
 defaults write com.apple.dock springboard-columns -int 9
 defaults write com.apple.dock springboard-rows -int 3
 killall Dock
+
+# Dark mode to menubar and dock only
+defaults write -g NSRequiresAquaSystemAppearance -bool true
