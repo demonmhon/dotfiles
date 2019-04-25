@@ -97,22 +97,13 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+if [ -f ~/.docker_aliases ]; then
+  . ~/.docker_aliases
+fi
+
 prompt_context() {}
 
 alias cls="clear"
-
-alias dkps="docker ps"
-alias dkst="docker stats"
-alias dkstopall="docker stop $(docker ps -a -q)"
-alias dkpsa="docker ps -a"
-alias dkimgs="docker images"
-alias dkcpup="docker-compose up -d"
-alias dkcpdown="docker-compose down"
-alias dkcpstart="docker-compose start"
-alias dkcpstop="docker-compose stop"
-alias dklogsf="docker logs --follow"
-alias dklogs="docker logs"
-alias dkx="docker exec -it"
 
 alias ip="curl ifconfig.me"
 
