@@ -159,15 +159,21 @@
 	"React Component Cycles": {
 		"prefix": "re:comp_cycles",
 		"body": [
-			"componentWillMount() {\n\t\n}",
-			"componentWillReceiveProps(nextProps){\n\t\n}",
+			"constructor() {\n\t\n}",
+			"shouldComponentUpdate() {\n\t\n}",
 			"componentWillUnmount(){\n\t\n}"
 		]
 	},
-	"React Component Mount": {
+	"React componentDidMount": {
 		"prefix": "re:comp_did_mount",
 		"body": [
 			"componentDidMount() {\n\t$1\n}"
+		]
+	},
+	"React componentWillUpdate": {
+		"prefix": "re:comp_will_update",
+		"body": [
+			"componentWillUpdate() {\n\t$1\n}"
 		]
 	},
 	"React Component Receive Props": {
@@ -212,7 +218,7 @@
 			"\treturn async (dispatch, getState) => {",
 			"\t\tdispatch({type: ACTIONS.LOADING});",
 			"\t}",
-			"}"
+			"};"
 		]
 	},
 	"Redux Combine Reducer": {
@@ -238,7 +244,7 @@
 			"\t\t\t\t...state",
 			"\t\t\t}",
 			"\t}",
-			"}"
+			"};"
 		]
 	},
 	"Redux Container": {
