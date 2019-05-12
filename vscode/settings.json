@@ -23,7 +23,7 @@
         "Gomeeki",
         "AdvisorZone"
     ],
-    "terminal.integrated.fontFamily": "Hack",
+    "terminal.integrated.fontFamily": "Hack, Menlo, Monaco, 'Courier New', monospace",
     "terminal.integrated.fontSize": 11,
     "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
     "workbench.sideBar.location": "right",
