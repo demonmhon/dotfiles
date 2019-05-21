@@ -3,8 +3,11 @@
     "editor.renderWhitespace": "all",
     "editor.fontFamily": "Hack, Menlo, Monaco, 'Courier New', monospace",
     "editor.tabSize": 2,
+    "editor.renderControlCharacters": false,
     "editor.snippetSuggestions": "top",
-    "editor.minimap.enabled": false,
+    "editor.minimap.enabled": true,
+    "editor.minimap.maxColumn": 60,
+    "editor.minimap.renderCharacters": false,
     "explorer.autoReveal": false,
     "prettier.singleQuote": true,
     "markdown.preview.fontSize": 13,
@@ -35,10 +38,10 @@
     "workbench.startupEditor": "newUntitledFile",
     "workbench.statusBar.feedback.visible": false,
     "npm.fetchOnlinePackageInfo": false,
-    "editor.renderControlCharacters": false,
     "gitlens.codeLens.includeSingleLineSymbols": true,
     "gitlens.currentLine.scrollable": false,
     "gitlens.defaultGravatarsStyle": "mp",
+    "gitlens.hovers.enabled": false,
     "gitlens.views.repositories.files.layout": "list",
     "gitlens.views.search.enabled": false,
     "gitlens.views.compare.enabled": false,
@@ -50,6 +53,9 @@
     "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}",
     "window.zoomLevel": 0,
     "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     }
 }
