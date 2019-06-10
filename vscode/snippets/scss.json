@@ -22,6 +22,45 @@
 			"}"
 		]
 	},
+	"Basic color variables": {
+		"prefix": "var:color",
+		"body": [
+			"// Colors",
+			"// Palette from Material",
+			"// URL: https://material.io/tools/color/#!/",
+			"$$color-text: #000;",
+			"$$color-primary: #01579b;",
+			"$$color-primary-light: #4f83cc;",
+			"$$color-primary-dark: #002f6c;",
+			"$$color-primary-contrast: #fff;",
+			"$$color-accent: #ffb300;",
+			"$$color-accent-light: #ffe54c;",
+			"$$color-accent-dark: #c68400;",
+			"$$color-accent-contrast: #000;"
+		]
+	},
+	"Basic transition variables": {
+		"prefix": "var:transition",
+		"body": [
+			"// Transition",
+			"$$transition: .5s;",
+			"$$transition-faster: .25s;",
+			"$$transition-fastest: .15s;",
+			"$$transition-slower: .7s;",
+			"$$transition-slowest: .85s;"
+		]
+	},
+	"Basic media query variables": {
+		"prefix": "var:mq",
+		"body": [
+			"// Common breakpoints",
+			"$$screen-xs: 0;",
+			"$$screen-sm: 576px;",
+			"$$screen-md: 768px;",
+			"$$screen-lg: 992px;",
+			"$$screen-xl: 1200px;"
+		]
+	},
 	"BS3: Media query list": {
 		"prefix": "bs3:mq",
 		"body": [
@@ -36,6 +75,19 @@
 			"@include media-breakpoint-up(sm) {",
 			"\t${1:.class} {",
 			"\t\t${2:display: block;}",
+			"\t}",
+			"}"
+		]
+	},
+	"Flex: centered": {
+		"prefix": "flex:centered",
+		"body": [
+			".flex-container {",
+			"\tdisplay: flex;",
+			"\t.flex-item {",
+			"\t\tflex: 1;",
+			"\t\tjustify-content: center;",
+			"\t\talign-items: center;",
 			"\t}",
 			"}"
 		]
