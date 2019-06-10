@@ -91,26 +91,6 @@
 		]
 	},
 	// React Component
-	"React 14.x New Component": {
-		"prefix": "re:14x_new_component",
-		"description": "New React.Component (React 14)",
-		"body": [
-			"import React, {PropTypes} from 'react';\n",
-			"import './${1:Foo}.css';\n",
-			"class ${1:Foo} extends React.Component {",
-			"\tconstructor(props) {",
-			"\t\tsuper(props);\n",
-			"\t\tthis.state = {};",
-			"\t}\n",
-			"\trender() {",
-			"\t\treturn (<div />);",
-			"\t}",
-			"}\n",
-			"${1:Foo}.propTypes = {};\n",
-			"${1:Foo}.defaultProps = {};\n",
-			"export default ${1:Foo};"
-		]
-	},
 	"React 15.x New Component": {
 		"prefix": "re:15x_new_component",
 		"description": "New React.Component (React 15+)",
@@ -118,6 +98,8 @@
 			"import React from 'react';",
 			"import PropTypes from 'prop-types';\n",
 			"import './${1:Foo}.css';\n",
+			"const propTypes = {};\n",
+			"const defaultProps = {};\n",
 			"class ${1:Foo} extends React.Component {",
 			"\tconstructor(props) {",
 			"\t\tsuper(props);\n",
@@ -127,8 +109,8 @@
 			"\t\treturn (<div />);",
 			"\t}",
 			"}\n",
-			"${1:Foo}.propTypes = {};\n",
-			"${1:Foo}.defaultProps = {};\n",
+			"${1:Foo}.propTypes = propTypes;\n",
+			"${1:Foo}.defaultProps = defaultProps;\n",
 			"export default ${1:Foo};"
 		]
 	},
@@ -138,16 +120,18 @@
 		"body": [
 			"import React from 'react';",
 			"import PropTypes from 'prop-types';\n",
+			"const propTypes = {};\n",
+			"const defaultProps = {};\n",
 			"const ${1:Foo} = () => {",
 			"\treturn (<div />);",
 			"};\n",
-			"${1:Foo}.propTypes = {};\n",
-			"${1:Foo}.defaultProps = {};\n",
+			"${1:Foo}.propTypes = propTypes;\n",
+			"${1:Foo}.defaultProps = defaultProps;\n",
 			"export default ${1:Foo};"
 		]
 	},
 	"React Component Constructor": {
-		"prefix": "re:comp_constructure",
+		"prefix": "re:comp_constructor",
 		"description": "",
 		"body": [
 			"constructor(props) {",
@@ -180,6 +164,12 @@
 		"prefix": "re:component_re_props",
 		"body": [
 			"componentWillReceiveProps(nextProps) {\n\t$1\n}"
+		]
+	},
+	"React Component Will Unmount": {
+		"prefix": "re:component_will_unmount",
+		"body": [
+			"componentWillUnmount() {\n\t$1\n}"
 		]
 	},
 	"React Component Should Update": {
