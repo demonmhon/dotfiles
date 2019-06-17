@@ -57,6 +57,16 @@
 		]
 	},
 	// jQuery
+	"onLoad": {
+		"prefix": "jq:ready",
+		"body": [
+			"(function($) {",
+			"\t$(document).ready(function() {",
+			"\t\t${1://}"
+			"\t});",
+			"})(jQuery);"
+		]
+	},
 	"AJAX": {
 		"prefix": "jq:ajax",
 		"body": [
