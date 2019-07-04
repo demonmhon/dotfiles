@@ -91,5 +91,32 @@
 			"\t}",
 			"}"
 		]
+	},
+	"Square Image": {
+		"prefix": "img:square",
+		"body": [
+			".img-square {",
+			"\twidth: 30px;",
+			"\tposition: relative;",
+			"\toverflow: hidden;",
+			"\tborder-radius: 50%;",
+			"\t&::after {",
+			"\t\tcontent: '';",
+			"\t\tdisplay: block;",
+			"\t\tpadding-bottom: 100%;",
+			"\t}",
+			"\t.img-container {",
+			"\t\tposition: absolute;",
+			"\t\twidth: 100%;",
+			"\t\theight: 100%;",
+			"\t}",
+			"\timg {",
+			"\t\tobject-fit: cover;",
+			"\t\tobject-position: 50% 50%;",
+			"\t\twidth: 100%;",
+			"\t\theight: 100%;",
+			"\t}",
+			"}"
+		]
 	}
 }
