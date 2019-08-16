@@ -118,5 +118,15 @@
 			"\t}",
 			"}"
 		]
+	},
+	"Loop": {
+		"prefix": "loop",
+		"body": [
+			"@for $$i from 1 through ${1:10} {",
+			"\t&:nth-child(#{$$i}){",
+			"\t\tanimation-delay: $$i * 0.05s;",
+			"\t}",
+			"}"
+		]
 	}
 }
