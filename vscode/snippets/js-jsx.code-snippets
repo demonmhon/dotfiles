@@ -36,7 +36,7 @@
 			"/* eslint-enable max-len */"
 		]
 	},
-	// React Component
+	// React 15.x Component
 	"React 15.x New Component": {
 		"scope": "javascript, javascriptreact",
 		"prefix": "re:15x_new_component",
@@ -74,6 +74,24 @@
 			"\treturn (<div />);",
 			"};\n",
 			"${1:Foo}.propTypes = propTypes;\n",
+			"${1:Foo}.defaultProps = defaultProps;\n",
+			"export default ${1:Foo};"
+		]
+	},
+	// React 16.x Pure functional components
+	"React 16.x Pure Functional Component": {
+		"scope": "javascript, javascriptreact",
+		"prefix": "re:16x_pure",
+		"description": "New pure functional components (React 16+)",
+		"body": [
+			"import React from 'react';",
+			"import PropTypes from 'prop-types';\n",
+			"const propTypes = {};\n",
+			"const defaultProps = {};\n",
+			"function ${1:Foo}(props) {",
+			"\treturn (<div />);",
+			"};\n",
+			"${1:Foo}.propTypes = propTypes;",
 			"${1:Foo}.defaultProps = defaultProps;\n",
 			"export default ${1:Foo};"
 		]
