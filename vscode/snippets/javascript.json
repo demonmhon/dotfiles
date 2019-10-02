@@ -37,6 +37,16 @@
 			"const ${1:name} = req.body.${1:name};"
 		]
 	},
+	// Debug
+	"Debug by export data to file": {
+		"prefix": "debug:export:file",
+		"body": [
+			"const fs = require('fs');",
+			"const OUTPUT_DIR = 'path/to/output';",
+			"const FILE_OUTPUT_PATH = `${$OUTPUT_DIR}/${debugfilename}.txt`;",
+			"fs.writeFileSync(FILE_OUTPUT_PATH, content, 'utf8');"
+		]
+	},
 	// jQuery
 	"onLoad": {
 		"prefix": "jq:ready",
