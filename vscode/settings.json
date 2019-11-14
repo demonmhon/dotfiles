@@ -45,7 +45,6 @@
     "gitlens.currentLine.scrollable": false,
     "gitlens.defaultGravatarsStyle": "mp",
     "gitlens.hovers.enabled": false,
-    "gitlens.views.repositories.files.layout": "list",
     "gitlens.views.search.enabled": false,
     "gitlens.views.compare.enabled": false,
     "gitlens.currentLine.enabled": false,
@@ -65,5 +64,6 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "java.configuration.checkProjectSettingsExclusions": false
+    "java.configuration.checkProjectSettingsExclusions": false,
+    "gitlens.views.repositories.files.layout": "list"
 }
