@@ -128,5 +128,11 @@
 			"\t}",
 			"}"
 		]
+	},
+	"Media Query: Color Scheme": {
+		"prefix": "mq:colorscheme",
+		"body": [
+			"@media screen and (prefers-color-scheme: ${1:dark}) {\n\t\n}"
+		]
 	}
 }
