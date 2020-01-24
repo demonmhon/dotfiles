@@ -162,6 +162,14 @@
 		]
 	},
 	// Redux
+	"Redux Middleware": {
+		"scope": "javascript, javascriptreact",
+		"prefix": "rdx:middleware",
+		"body": [
+			"const middleware = store => next => action => {\n\t\n};\n",
+			"export default middleware;"
+		]
+	},
 	"Redux Actions Constant": {
 		"scope": "javascript, javascriptreact",
 		"prefix": "rdx:actions_const",
