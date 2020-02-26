@@ -85,10 +85,10 @@
 		"body": [
 			".flex-container {",
 			"\tdisplay: flex;",
+			"\tjustify-content: center;",
+			"\talign-items: center;",
 			"\t.flex-item {",
-			"\t\tflex: 1;",
-			"\t\tjustify-content: center;",
-			"\t\talign-items: center;",
+			"\t\tdisplay: block",
 			"\t}",
 			"}"
 		]

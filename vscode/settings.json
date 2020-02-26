@@ -1,7 +1,7 @@
 {
     "breadcrumbs.enabled": true,
     "editor.renderWhitespace": "all",
-    "editor.fontFamily": "'Cascadia Code', Hack, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontFamily": "'Cascadia Mono', Hack, Menlo, Monaco, 'Courier New', monospace",
     "editor.tabSize": 2,
     "editor.renderControlCharacters": false,
     "editor.snippetSuggestions": "top",
@@ -27,7 +27,7 @@
         "Gomeeki",
         "AdvisorZone"
     ],
-    "terminal.integrated.fontFamily": "'Cascadia Code', Hack, Menlo, Monaco, 'Courier New', monospace",
+    "terminal.integrated.fontFamily": "'Cascadia Mono', Hack, Menlo, Monaco, 'Courier New', monospace",
     "terminal.integrated.fontSize": 11,
     "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
     "workbench.sideBar.location": "right",
@@ -65,5 +65,7 @@
     },
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "java.configuration.checkProjectSettingsExclusions": false,
-    "gitlens.views.repositories.files.layout": "list"
+    "gitlens.views.repositories.files.layout": "list",
+    "diffEditor.renderSideBySide": true,
+    "todo-tree.tree.showScanModeButton": false
 }
