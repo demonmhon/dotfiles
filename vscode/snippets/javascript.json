@@ -42,8 +42,9 @@
 		"prefix": "debug:export:file",
 		"body": [
 			"const fs = require('fs');",
-			"const OUTPUT_DIR = '/path/to/output';",
-			"const FILE_OUTPUT_PATH = `${$OUTPUT_DIR}/${debugfilename}.txt`;",
+			"const OUTPUT_DIR = './path/to/output';",
+			"const FILE_OUTPUT_PATH = `${$OUTPUT_DIR}/${file_name}.txt`;",
+			"if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR, { recursive: true })",
 			"fs.writeFileSync(FILE_OUTPUT_PATH, content, 'utf8');"
 		]
 	},

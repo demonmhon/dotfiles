@@ -9,7 +9,6 @@
     "editor.minimap.maxColumn": 60,
     "editor.minimap.renderCharacters": false,
     "editor.rulers": [120],
-    "editor.suggestSelection": "first",
     "explorer.autoReveal": false,
     "prettier.singleQuote": true,
     "markdown.preview.fontSize": 13,
@@ -48,6 +47,7 @@
     "gitlens.hovers.enabled": false,
     "gitlens.views.search.enabled": false,
     "gitlens.views.compare.enabled": false,
+    "gitlens.views.repositories.files.layout": "list",
     "gitlens.currentLine.enabled": false,
     "gitlens.hovers.currentLine.over": "line",
     "javascript.implicitProjectConfig.checkJs": true,
@@ -64,9 +64,7 @@
     "[javascriptreact]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "java.configuration.checkProjectSettingsExclusions": false,
-    "gitlens.views.repositories.files.layout": "list",
     "diffEditor.renderSideBySide": true,
-    "todo-tree.tree.showScanModeButton": false
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
 }
