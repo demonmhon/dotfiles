@@ -546,8 +546,7 @@
 			"});"
 		]
 	},
-	// 3rd Parties Packages
-	"Blustone System Message": {
+	"Bluestone: System Message": {
 		"scope": "javascript, javascriptreact",
 		"prefix": "re:bs_system_message",
 		"body": [
@@ -559,13 +558,25 @@
 			"});"
 		]
 	},
+	"AZ: getToggle()": {
+		"scope": "javascript, javascriptreact",
+    "prefix": "az:gtg",
+		"description": "getToggles()._____",
+		"body": ["getToggles().$1"],
+  },
+  "AZ: import getToggle": {
+		"scope": "javascript, javascriptreact",
+    "prefix": "az:imtg",
+		"description": "import { getToggles } from 'quick-quote/feature-toggles'",
+		"body": ["import { getToggles } from 'quick-quote/feature-toggles'"],
+  },
 	// Helpers
 	"Dump": {
 		"scope": "javascript, javascriptreact",
 		"prefix": "re:dump_props",
 		"description": "Dump the props as JSON",
 		"body": [
-			"<pre>{JSON.stringify(${1:this.props}, null, '  ')}</pre>"
+			"<pre style={{fontSize:'12px'}}>{JSON.stringify(${1:this.props}, null, '  ')}</pre>"
 		]
 	}
 }
