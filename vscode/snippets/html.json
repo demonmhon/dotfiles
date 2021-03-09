@@ -24,22 +24,6 @@
 			"@endforeach"
 		]
 	},
-
-	// Content
-	"Page Body": {
-		"prefix": "tpl:page_content",
-		"body": [
-			"<div id=\"content-page--${1:new}\" class=\"content-page content-page--${1:new}\">",
-			"\t<div class=\"section section--${2:content}\">",
-			"\t\t<div class=\"container\">",
-			"\t\t\t<div class=\"row\">",
-			"\t\t\t\t<div class=\"col-xs-12\">$3</div>",
-			"\t\t\t</div>",
-			"\t\t</div>",
-			"\t</div>",
-			"</div>"
-		]
-	},
 	
 	// EJS
 	"EJS Dump": {
@@ -49,36 +33,39 @@
 		]
 	},
 
-
 	// HTML
 	"New Content Page Body": {
-		"prefix": "page_content",
+		"prefix": "page:content",
 		"body": [
 			"<div id=\"content-page--${1:new}\" class=\"content-page content-page--${1:new}\">",
 			"\t<article class=\"content-page__page-article\">",
-			"\t\t<div class=\"container\">",
-			"\t\t\t<div class=\"row\">",
-			"\t\t\t\t<div class=\"col-xs-12\">$2</div>",
-			"\t\t\t</div>",
-			"\t\t</div>",
+			"\t\t<div class=\"container\">$2</div>",
 			"\t</article>",
 			"</div>"
 		]
 	},
 	"New Content Page Header": {
-		"prefix": "page_header",
+		"prefix": "page:header",
 		"body": [
 			"<div class=\"content-page__page-header\">",
 			"\t<div class=\"container\">",
-			"\t\t<div class=\"row\">",
-			"\t\t\t<div class=\"col-xs-12\">",
-			"\t\t\t\t<div class=\"content-page__page-title\">",
-			"\t\t\t\t\t<h1 class=\"content-page__page-title-text\">${1:Page Title}</h1>",
-			"\t\t\t\t</div>",
-			"\t\t\t</div>",
+			"\t\t<div class=\"content-page__page-title\">",
+			"\t\t\t<h1 class=\"content-page__page-title-text\">${1:Page Title}</h1>",
 			"\t\t</div>",
 			"\t<div>",
 			"</div>",
+		]
+	},
+
+	// Meta
+	"Meta OG": {
+		"prefix": "og",
+		"body": [
+			"<meta property=\"og:url\" content=\"\" />",
+			"<meta property=\"og:type\" content=\"\" />",
+			"<meta property=\"og:title\" content=\"\" />",
+			"<meta property=\"og:description\" content=\"\" />",
+			"<meta property=\"og:image\" content=\"\" />",
 		]
 	}
 }

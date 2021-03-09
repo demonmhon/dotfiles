@@ -62,26 +62,20 @@
 			"$$screen-xl: 1200px;"
 		]
 	},
-	"BS3: Media query list": {
+	"Bootstrap 3: Media query list": {
 		"prefix": "bs3:mq",
 		"body": [
-			"@media (min-width: $$screen-sm) {\n\t${1}\n}",
-			"@media (min-width: $$screen-md) {\n\t\n}",
-			"@media (min-width: $$screen-lg) {\n\t\n}"
+			"@media (min-width: $$screen-sm) {\n\t${1}\n}"
 		]
 	},
-	"BS4: Media query": {
+	"Bootstrap 4: Media query": {
 		"prefix": "bs4:mq",
 		"body": [
-			"@include media-breakpoint-up(sm) {",
-			"\t${1:.class} {",
-			"\t\t${2:display: block;}",
-			"\t}",
-			"}"
+			"@include media-breakpoint-up(sm) {\n\t${1}\n}"
 		]
 	},
-	"Flex: centered": {
-		"prefix": "flex:centered",
+	"Display Flex: centered": {
+		"prefix": "dp:centered",
 		"body": [
 			".flex-container {",
 			"\tdisplay: flex;",
@@ -130,10 +124,31 @@
 			"}"
 		]
 	},
-	"Media Query: Color Scheme": {
+	"Media query: Color Scheme": {
 		"prefix": "mq:colorscheme",
 		"body": [
 			"@media screen and (prefers-color-scheme: ${1:dark}) {\n\t\n}"
+		]
+	},
+	"Media query: screen width": {
+		"prefix": "mq:w",
+		"body": [
+			"@media (min-width: ${1:768px}) {\n\t${2}\n}"
+		]
+	},
+	"Psudo-Element": {
+		"prefix": "el:before",
+		"body": [
+			"position: relative;",
+			"&::before {",
+			"\tcontent: '';",
+			"\tdisplay: block;",
+			"\tposition: absolute;",
+			"\ttop: 0;",
+			"\tbottom: 0;",
+			"\tleft: 0;",
+			"\tright: 0;",
+			"}"
 		]
 	}
 }

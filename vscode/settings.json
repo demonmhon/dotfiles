@@ -8,7 +8,9 @@
   "editor.minimap.enabled": false,
   "editor.minimap.maxColumn": 60,
   "editor.minimap.renderCharacters": false,
-  "editor.rulers": [120],
+  "editor.rulers": [
+    100
+  ],
   "explorer.autoReveal": false,
   "prettier.singleQuote": true,
   "markdown.preview.fontSize": 13,
@@ -23,7 +25,11 @@
     "**/bower_components": true,
     "**/tmp": true
   },
-  "cSpell.userWords": ["Gomeeki", "AdvisorZone"],
+  "cSpell.userWords": [
+    "AdvisorZone",
+    "Gomeeki",
+    "customizer"
+  ],
   "terminal.integrated.fontFamily": "'Cascadia Mono', Hack, Menlo, Monaco, 'Courier New', monospace",
   "terminal.integrated.fontSize": 11,
   "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
@@ -50,7 +56,6 @@
   "javascript.updateImportsOnFileMove.enabled": "always",
   "window.closeWhenEmpty": false,
   "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}",
-  "window.zoomLevel": 0,
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -63,7 +68,6 @@
   "java.configuration.checkProjectSettingsExclusions": false,
   "javascript.validate.enable": false,
   "diffEditor.renderSideBySide": true,
-  "editor.suggestSelection": "first",
   "flow.useLSP": false,
   "java.semanticHighlighting.enabled": true,
   "docker.volumes.description": [
@@ -76,5 +80,33 @@
   "markdownlint.config": {
     "MD028": false
   },
-  "color-highlight.markRuler": false
+  "color-highlight.markRuler": false,
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": false
+  },
+  "editor.quickSuggestionsDelay": 10,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "jest.coverageFormatter": "GutterFormatter",
+  "workbench.editor.showTabs": true,
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "editor.fontLigatures": true,
+  "extensions.ignoreRecommendations": true,
+  "phpfmt.php_bin": "C:\\PHP\\php.exe",
+  "phpfmt.indent_with_space": 2,
+  "phpformatter.composer": true,
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "cSpell.enableFiletypes": [
+    "!json"
+  ]
 }

@@ -18,6 +18,14 @@
 			"// eslint-disable no-unused-vars"
 		]
 	},
+	// Utils
+	"Mock await": {
+		"scope": "javascript, javascriptreact",
+		"prefix": "mockawait",
+		"body": [
+			"new Promise(resolve => setTimeout(resolve, 3000, { /* return data */ })"
+		]
+	},
 	// Comment
 	"JS Doc: Description": {
 		"scope": "javascript, javascriptreact",

@@ -1,0 +1,23 @@
+{
+	"standard node.js": {
+		"prefix": "node",
+		"body": [
+			"## Getting Started\n",
+			"Install dependencies\n",
+			"```bash",
+			"npm install",
+			"```\n",
+			"## Run from localhost for development\n",
+			"Copy .env and modify for your environment",
+			"```bash",
+			"cp .env.example .env",
+			"```\n",
+			"```bash",
+			"npm start",
+			"```\n",
+			"## Resources\n",
+			" * [Github](https://github.com/)"
+		],
+		"description": "description"
+	}
+}
