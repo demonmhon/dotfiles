@@ -13,9 +13,21 @@ defaults write -g ApplePressAndHoldEnabled -bool false
 defaults write com.apple.screencapture disable-shadow -bool true
 
 # Set Launchpad
-defaults write com.apple.dock springboard-columns -int 9
-defaults write com.apple.dock springboard-rows -int 3
+defaults write com.apple.dock springboard-columns -int 10
+defaults write com.apple.dock springboard-rows -int 4
 killall Dock
 
 # Dark mode to menubar and dock only
 defaults write -g NSRequiresAquaSystemAppearance -bool true
+
+# Install Homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# Install Git
+brew install git
+
+# Install ZSH
+brew install zsh
+
+# Install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
