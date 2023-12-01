@@ -109,7 +109,8 @@ alias cls="clear"
 
 alias ip="curl ifconfig.me"
 
-alias zre="source ~/.zshrc"
+alias esrc="$EDITOR $HOME/.zshrc"
+alias src="source $HOME/.zshrc"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
